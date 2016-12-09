@@ -1,0 +1,18 @@
+from helpers import rotate_character, user_input_is_valid
+from sys import argv
+
+
+def caeser(text, rot):
+    result = ""
+    for i in text:
+        result += rotate_character(i, rot)
+    return result
+
+
+def main(message, rotation):
+    return caeser(message, rotation)
+
+
+if __name__ == '__main__':
+    if user_input_is_valid(argv, False, True):
+        print(main(input("Type a message:\n"), int(argv[1])))
