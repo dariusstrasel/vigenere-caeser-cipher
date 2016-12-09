@@ -13,9 +13,7 @@ def rotate_character(char, rot):
     if char not in string.ascii_letters:
         return char
     if char in upper:
-        #print(alphabet_position(char) + rot % 26)
         return string.ascii_uppercase[(alphabet_position(char) + rot) % 26]
-    #print(alphabet_position(char) + rot % 26)
     return string.ascii_lowercase[(alphabet_position(char) + rot) % 26]
 
 def is_int(s):
