@@ -2,7 +2,7 @@ from helpers import rotate_character, user_input_is_valid
 from sys import argv
 
 
-def caeser(text, rot):
+def encrypt(text, rot):
     result = ""
     for i in text:
         result += rotate_character(i, rot)
@@ -10,7 +10,7 @@ def caeser(text, rot):
 
 
 def main(message, rotation):
-    return caeser(message, rotation)
+    return encrypt(message, rotation)
 
 
 if __name__ == '__main__':
