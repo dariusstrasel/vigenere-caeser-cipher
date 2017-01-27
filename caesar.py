@@ -1,4 +1,4 @@
-from helpers import rotate_character, user_input_is_valid
+from helpers import rotate_character, user_input_is_valid, is_int
 from sys import argv
 
 
@@ -14,5 +14,5 @@ def main(message, rotation):
 
 
 if __name__ == '__main__':
-    if user_input_is_valid(argv, False, True):
-        print(main(input("Type a message:\n"), int(argv[1])))
+    if user_input_is_valid(argv):
+        main(input("Type a message:\n"), int(argv[1]))

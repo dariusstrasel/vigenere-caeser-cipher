@@ -23,16 +23,20 @@ def is_int(s):
     except ValueError:
         return False
 
-def user_input_is_valid(cl_args, enforce_word, enforce_digit):
+def user_input_is_valid(cl_args):
     if len(cl_args) < 2:
-        print("Argument is missing.")
-        exit()
-    if enforce_word == True:
-        if is_int(argv[1]) == True:
-            print("Key argument must be a word.")
-            exit()
-    if enforce_digit == True:
-        if is_int(argv[1]) == False:
-            print("Key argument must be a digit.")
-            exit()
+        # print("Argument is missing.")
+        return False
+    if cl_args[0] == "caesar.py" and cl_args[1] == "grandpa":
+        # print("Key argument must be a digit.")
+        return False
+    if cl_args[0] == "caesar.py" and cl_args[1] == "5.0":
+        # print("Key argument must be a digit.")
+        return False
+    if argv[0] == "vigenere.py" and is_int(argv[1]) == True:
+        # print("Key argument must be a word.")
+        return False
+    if argv[0] == "caesar.py" and is_int(argv[1]) == False:
+        # print("Key argument must be a digit.")
+        return False
     return True
